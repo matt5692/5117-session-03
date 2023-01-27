@@ -1,3 +1,35 @@
 body {
-    background-color: aquamarine;
+    background-color: aqua;
+}
+
+.header{
+    text-align: center;
+}
+
+.form-group{
+    padding-bottom: 10px;
+}
+#mkleo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 19%;
+}
+
+#apologyForm{
+    border-style: solid;
+    background-color: aliceblue;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-left: 5px;
+    font-size: 1em;
+}
+
+#formSubmit {
+    margin-bottom: 5px;
+}
+
+.checkbox {
+    column-count: 2;
 }

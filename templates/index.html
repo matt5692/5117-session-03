@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="static/style.css">
+<script src="static/script.js"></script>
+<title>Mkleo Apology Form</title>
+</head>
+
+<body>
+    <h1 class="header">Mkleo Apology Form</h1>
+    <img src="static/MKLeo_at_Frostbite_2020_(cropped).jpg" id="mkleo">
+    <div>
+        <form name="apologyForm" id="apologyForm" onsubmit="return false">
+            <p>To: Mkleo</p>
+            <div class="form-group">
+                <label for="name">From: </label>
+                <input name="name" id="name" type="text" pattern="[a-zA-Z0-9\s]+" title="Name must be alphanumeric" required>
+            </div>
+            <p>Reason for behavior: </p>
+            <div class="form-group">
+                <label for="reason1">The media convinced me he was done</label>
+                <input name="reason1" id="reason1" type="checkbox">
+            </div>
+            <div class="form-group">
+                <label for="reason2">I didn't watch the actual games</label>
+                <input name="reason2" id="reason2" type="checkbox">
+            </div>
+            <div class="form-group">
+                <label for="reason3">I miss joker too much</label>
+                <input name="reason3" id="reason3" type="checkbox">
+            </div>
+            <div class="form-group">
+                <label for="reason4">I don't know smash</label>
+                <input name="reason4" id="reason4" type="checkbox">
+            </div>
+            <div class="form-group">
+                <label for="reason5">I was jealous of leo</label>
+                <input name="reason5" id="reason5" type="checkbox">
+            </div>
+            <div class="form-group">
+                <label for="reason6">Mercury was in retrograde</label>
+                <input name="reason6" id="reason6" type="checkbox">
+            </div>
+            <button type="submit" id="formSubmit" onclick="addEntry()">I will hereby respect Mkleo and I will NOT talk down on the future first-ballot Hall of Famer</button>
+        </form>
+    </div>
+    <div>
+        <h2>Entries</h2>
+        <ul id="entries" name="entries">
+            <li>me</li>
+        </ul>
+    </div>
+</body>
+<footer>
+    <a href="https://www.youtube.com/watch?v=p9b0a5F9VLg">Watch the five time Genesis champion here</a>
+</footer>
+</html>
