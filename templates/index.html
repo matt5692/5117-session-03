@@ -11,7 +11,7 @@
     <h1 class="header">Mkleo Apology Form</h1>
     <img src="static/MKLeo_at_Frostbite_2020_(cropped).jpg" id="mkleo">
     <div>
-        <form name="apologyForm" id="apologyForm" onsubmit="return false">
+        <form name="apologyForm" id="apologyForm" action="{{ url_for('process_entry') }}">
             <p>To: Mkleo</p>
             <div class="form-group">
                 <label for="name">From: </label>
@@ -42,13 +42,16 @@
                 <label for="reason6">Mercury was in retrograde</label>
                 <input name="reason6" id="reason6" type="checkbox">
             </div>
-            <button type="submit" id="formSubmit" onclick="addEntry()">I will hereby respect Mkleo and I will NOT talk down on the future first-ballot Hall of Famer</button>
+            <button type="submit" id="formSubmit">I will hereby respect Mkleo and I will NOT talk down on the future first-ballot Hall of Famer</button>
         </form>
     </div>
     <div>
         <h2>Entries</h2>
         <ul id="entries" name="entries">
             <li>me</li>
+            {% for entry in entry_list %}
+            <li>{{entry}}</li>
+            {% endfor %}
         </ul>
     </div>
 </body>

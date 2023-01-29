@@ -16,3 +16,13 @@ def hi():
 def show_user_profile(username):
     # show the user profile for that user
     return f'User {escape(username)}'
+
+# global entries list
+entries = []
+
+@app.get('/apologyForm')
+def process_entry():
+  entries.append(request.args.get("name", "unknown"))
+  return render_template('index.html', entry_list=entries)
+
+  
