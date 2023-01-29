@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from markupsafe import escape
 
 app = Flask(__name__)
 
@@ -9,4 +10,9 @@ def index():
 @app.route('/hi', methods=['GET'])
 def hi():
   user_name = request.args.get("userName", "unknown")
-  return render_template('main.html', user=user_name) 
+  return render_template('main.html', user=user_name)
+
+@app.route('/user/<username>')
+def show_user_profile(username):
+    # show the user profile for that user
+    return f'User {escape(username)}'
