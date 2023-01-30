@@ -50,7 +50,9 @@
         <ul id="entries" name="entries">
             <li>me</li>
             {% for entry in entry_list %}
+            {% if entry != "unknown" %}
             <li>{{entry}}</li>
+            {% endif %}
             {% endfor %}
         </ul>
     </div>
